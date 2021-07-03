@@ -53,7 +53,7 @@ namespace Terraria.Plugins.CoderCow.HouseRegions {
         
         if (!group.HasPermission(HouseRegionsPlugin.NoLimits_Permission)) {
           if (this.Config.MaxHousesPerUser > 0)
-            maxHouses = this.Config.MaxHousesPerUser;
+            maxHouses = this.Config.MaxHousesPerUser + 1; // Fixes *that* weird bug
 
           Configuration.HouseSizeConfig restrictingSizeConfig;
           if (!this.CheckHouseRegionValidSize(area, out restrictingSizeConfig))
